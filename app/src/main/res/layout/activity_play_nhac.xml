@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:weightSum="10"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_background_play_nhac"
+    tools:context=".Activity.PlayNhacActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarplaynhac"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpagerplaynhac"
+        android:layout_weight="8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+    </androidx.viewpager.widget.ViewPager>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="00:00"
+                android:gravity="center"
+                android:layout_weight="0.5"
+                android:id="@+id/textviewtimesong"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <SeekBar
+                android:thumbTint="@color/red"
+                android:progressTint="@color/red"
+                android:thumb="@drawable/thumb"
+                android:id="@+id/seekbarsong"
+                android:layout_weight="9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="00:00"
+                android:gravity="center"
+                android:layout_weight="0.5"
+                android:id="@+id/textviewtotaltimesong"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:contentDescription="Nút xáo trộn"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/icon_shuffle"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:id="@+id/imagebuttonsuffle"
+                android:layout_marginRight="15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <ImageButton
+                android:contentDescription="Nút chuyển bài trước đó"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/icon_previous"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:id="@+id/imagebuttonpre"
+                android:layout_marginRight="15dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <ImageButton
+                android:contentDescription="Nút play bài hát"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_play"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:id="@+id/imagebuttonplay"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+            <ImageButton
+                android:contentDescription="Nút chuyển bài tiếp theo"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/icon_next"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:id="@+id/imagebuttonnext"
+                android:layout_marginRight="15dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <ImageButton
+                android:contentDescription="Nút lặp lại bài đang phát"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="24dp"
+                android:src="@drawable/icon_repeat"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:id="@+id/imagebuttonrepeat"
+                android:layout_marginRight="15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
